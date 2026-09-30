@@ -1,0 +1,168 @@
+# ==========================================
+# PRACTICA 1 - REPOSITORIOS Y BASHTOP
+# ==========================================
+
+# Actualizar el sistema
+dnf update -y
+dnf upgrade -y
+
+# Ver repositorios
+dnf repolist
+dnf repolist --all
+
+# Buscar Bashtop
+dnf search bashtop
+dnf info bashtop
+
+# Instalar herramientas necesarias
+dnf install curl unzip -y
+
+# Descargar Bashtop
+cd /opt
+curl -L https://github.com/aristocratos/bashtop/archive/refs/heads/master.zip -o /opt/bashtop.zip
+
+# Descomprimir
+unzip /opt/bashtop.zip
+
+# Entrar a la carpeta
+cd /opt/bashtop-master
+
+# Instalar Bashtop
+make install
+
+# Ejecutar Bashtop
+bashtop
+
+# Desinstalar Bashtop
+cd /opt/bashtop-master
+make uninstall
+
+# Eliminar archivos
+rm -rf /opt/bashtop-master
+rm -f /opt/bashtop.zip
+
+# Eliminar dependencias no utilizadas
+dnf autoremove -y
+
+# Limpiar cache
+dnf clean all
+
+
+# ==========================================
+# PRACTICA 2 - CRON Y AT
+# ==========================================
+
+# Verificar cron
+systemctl status crond
+
+# Activar cron
+systemctl enable --now crond
+
+# Editar tareas cron
+crontab -e
+
+# Actualizar sistema todos los días a las 11 PM
+0 23 * * * /usr/bin/dnf update -y
+
+# Reiniciar todos los domingos a las 3 AM
+0 3 * * 0 /usr/sbin/reboot
+
+# Ver tareas cron
+crontab -l
+
+# Instalar AT
+dnf install at -y
+
+# Activar AT
+systemctl enable --now atd
+
+# Verificar AT
+systemctl status atd
+
+# Crear archivo de prueba
+touch /tmp/prueba_at.txt
+
+# Ver contenido de /tmp antes
+ls -la /tmp
+
+# Eliminar contenido de /tmp dentro de 1 minuto
+echo "rm -rf /tmp/*" | at now + 1 minute
+
+# Ver trabajos programados
+atq
+
+# Ver contenido después de ejecutarse
+ls -la /tmp
+
+
+# ==========================================
+# PRACTICA 3 - DISCO DE 20 GB
+# ==========================================
+
+# Ver discos disponibles
+lsblk
+
+# Ver información detallada de discos
+fdisk -l
+
+# Crear partición
+fdisk /dev/sdb
+
+# Dentro de fdisk:
+# n
+# p
+# Enter
+# Enter
+# w
+
+# Verificar partición
+lsblk
+
+# Formatear como EXT4
+mkfs.ext4 /dev/sdb1
+
+# Verificar sistema de archivos
+lsblk -f
+
+# Crear carpeta de montaje
+mkdir -p /home/cjesus/Desktop/disco20GB
+
+# Montar disco
+mount /dev/sdb1 /home/cjesus/Desktop/disco20GB
+
+# Verificar montaje
+df -h
+lsblk
+
+# Entrar al disco
+cd /home/cjesus/Desktop/disco20GB
+
+# Crear archivo
+touch AdrianAlcantara.txt
+
+# Comprobar archivo
+ls -la
+
+# Escribir contenido
+echo "Archivo de prueba del disco de 20GB" > AdrianAlcantara.txt
+
+# Ver contenido
+cat AdrianAlcantara.txt
+
+# Salir del directorio
+cd ~
+
+# Desmontar
+umount /dev/sdb1
+
+# Montar nuevamente en /mnt
+mount /dev/sdb1 /mnt
+
+# Entrar en /mnt
+cd /mnt
+
+# Comprobar archivo
+ls -la
+
+# Mostrar contenido
+cat /mnt/AdrianAlcantara.txt
