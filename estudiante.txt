@@ -1,0 +1,349 @@
+Nombre: Claudio de Jesús
+Matrícula: 2025-2223
+
+
+
+[cjesus@rocky9 ~]$ ls /mnt/hgfs
+[cjesus@rocky9 ~]$ cp ~/materia2/estudiante.txt /mnt/hgfs/PracticaLinux/
+cp: no se puede crear el fichero regular '/mnt/hgfs/PracticaLinux/': No es un directorio
+[cjesus@rocky9 ~]$ history
+    1  ip addr
+    2  nmcli divice status
+    3  nmcli device status
+    4  ip addr show ens160
+    5  nmcli connetion show
+    6  nmcli connection show
+    7  nmcli divice status
+    8  nmcli device status
+    9  nmcli connection show
+   10  ip addr show ens160
+   11  inet
+   12  nmcli device status
+   13  ping -c 4.8.8.8.8
+   14  ping -c 4 8.8.8.8
+   15  wheel
+   16  getent grup wheel
+   17  getent gruop wheel
+   18  getent group wheel
+   19  sudo -V
+   20  sudo useradd -m claudio
+   21  sudo passwd claudio
+   22  exit
+   23  ip addr
+   24  ens160
+   25  nmcli connection show
+   26  sudo nmcli connection modify ens160 ipv4.method aouto
+   27  whoami
+   28  id
+   29  su -
+   30  sudo groupdd guest
+   31  nmcli connection show
+   32  sudo nmcli connection modify ens160 ipv4.method auto
+   33  su -
+   34  sudo whoami
+   35  su -
+   36  groups
+   37  sudo whoami
+   38  su -
+   39  sudo whoami
+   40  cat/etc/readhat-release
+   41  cat /etc/redhat-release
+   42  hotsnamect1
+   43  hostnamectl
+   44  whoami
+   45  free -h
+   46  lscpu
+   47  lsblk
+   48  nmcli device status
+   49  nmcli c0nnection show
+   50  nmcli connection show
+   51  ping -c 4.8.8.8.8
+   52  ping -c 4 8.8.8.8
+   53  ping -c 4 google.com
+   54  cat /etc/redhat-release
+   55  hostnamectl
+   56  whoami
+   57  nmcli device statu
+   58  nmcli connection show
+   59  sudo nmcli connection modify ens160 ipv4.method auto
+   60  sudo nmcli connection up ens160
+   61  ip addr show ens160
+   62  nmcli device show ens160
+   63  ping -c 4 8.8.8.8
+   64  ping -c 4 google.com
+   65  ip route
+   66  ip addr show ens160
+   67  ping -c 3 192.168.1.50
+   68  sudo nmcli connection modify ens160 ipv4.method manual ipv4.addresses 192.168.1.50/24 ipv4.gateway 192.168.1.1
+   69  sudo nmcli connection modify ens160 ipv4.dns "8.8.8.8 8.8.4.4"
+   70  sudo nmcli connection modify ens160 ipv4.ignore-auto-dns yes
+   71  sudo nmcli connection down ens160
+   72  sudo nmcli connection up ens160
+   73  ip addr show ens160
+   74  ip route
+   75  default via 192.168.1.1 dev ens160
+   76  nmcli device show ens160 | grep DNS
+   77  ping -c 4 8.8.8.8
+   78  ping -c 4 google.com
+   79  nmcli connection show ens160
+   80  nmcli device show ens160
+   81  ip addr show ens160
+   82  ip route
+   83  ip addr show ens160
+   84  ip route
+   85  nmcli device show ens160 | grep DNS
+   86  ping -c 4 google.com
+   87  sudo whoami
+   88  sudo groupadd guest
+   89  getent group guest
+   90  sudo useradd invitado
+   91  sudo passwd invitado
+   92  sudo usermod -aG guest invitado
+   93  groups invitado
+   94  sudo userdel invitado
+   95  getent passwd invitado
+   96  sudo groupdel guest
+   97  getent group guest
+   98  id invitado
+   99  mkdir materia
+  100  ls
+  101  cd materia
+  102  pwd
+  103  touch estudiante.txt
+  104  ls -l
+  105  vi estudiante.txt
+  106  cat estudiante.txt
+  107  ls -l estudiante.txt
+  108  chmod 700 estudiante.txt
+  109  ls -l estudiante.txt
+  110  chmod 070 estudiante.txt
+  111  ls -l estudiante.tx
+  112  ls -l estudiante.txt
+  113  cd ..
+  114  mkdir materia2
+  115  ls
+  116  cp materia/estudiante.txt materia2/
+  117  cd ..
+  118  pwd
+  119  sudo chmod 470 materia/estudiante.txt
+  120  pwd
+  121  ls -la
+  122  ls -la materia
+  123  pwd
+  124  find ~ -maxdepth 3 -type d \( -name materia -o -name materia2 \) 2>/dev/null
+  125  find ~ -maxdepth 4 -name estudiante.txt 2>/dev/null
+  126  cp materia/estudiante.txt materia2/
+  127  cd ~
+  128  pwd
+  129  ls -la
+  130  cd ~
+  131  ls -l
+  132  ls -l materia
+  133  cat materia/estudiante.txt
+  134  ls -l materia/estudiante.txt
+  135  cat materia/estudiante.txt
+  136  sudo chmod 700 materia/estudiante.txt
+  137  ls -l materia/estudiante.txt
+  138  cat materia/estudiante.txt
+  139  cp materia/estudiante.txt materia1/
+  140  pwd
+  141  ls -ld materia materia1
+  142  cd ~
+  143  sudo ls -ld materia materia1
+  144  cd ~
+  145  sudo mkdir materia2
+  146  sudo ls -la materia2
+  147  sudo cat materia2/estudiante.txt
+  148  sudo cp materia/estudiante.txt materia2/
+  149  sudo ls -l materia2
+  150  sudo cat materia2/estudiante.txt
+  151  sudo rm -r materia
+  152  ls -l
+  153  cat ~/materia2/estudiante.txt
+  154  ls -l ~/materia2/estudiante.txt
+  155  sudo chmod u+r ~/materia2/estudiante.txt
+  156  cat ~/materia2/estudiante.txt
+  157  sudo cat ~/materia2/estudiante.txt
+  158  sudo chown cjesus:cjesus ~/materia2/estudiante.txt
+  159  chmod 644 ~/materia2/estudiante.txt
+  160  ls -l ~/materia2/estudiante.txt
+  161  cat ~/materia2/estudiante.txt
+  162  ls /mnt/hgfs
+  163  cp ~/materia2/estudiante.txt /mnt/hgfs/Shared/
+  164  ls /mnt/hgf
+  165  ls /mnt/hgfs
+  166  cp ~/materia2/estudiante.txt /mnt/hgfs/PracticaLinux/
+  167  history
+[cjesus@rocky9 ~]$ history | less
+[cjesus@rocky9 ~]$ history > comandos.txt
+[cjesus@rocky9 ~]$ cat comandos.txt
+    1  ip addr
+    2  nmcli divice status
+    3  nmcli device status
+    4  ip addr show ens160
+    5  nmcli connetion show
+    6  nmcli connection show
+    7  nmcli divice status
+    8  nmcli device status
+    9  nmcli connection show
+   10  ip addr show ens160
+   11  inet
+   12  nmcli device status
+   13  ping -c 4.8.8.8.8
+   14  ping -c 4 8.8.8.8
+   15  wheel
+   16  getent grup wheel
+   17  getent gruop wheel
+   18  getent group wheel
+   19  sudo -V
+   20  sudo useradd -m claudio
+   21  sudo passwd claudio
+   22  exit
+   23  ip addr
+   24  ens160
+   25  nmcli connection show
+   26  sudo nmcli connection modify ens160 ipv4.method aouto
+   27  whoami
+   28  id
+   29  su -
+   30  sudo groupdd guest
+   31  nmcli connection show
+   32  sudo nmcli connection modify ens160 ipv4.method auto
+   33  su -
+   34  sudo whoami
+   35  su -
+   36  groups
+   37  sudo whoami
+   38  su -
+   39  sudo whoami
+   40  cat/etc/readhat-release
+   41  cat /etc/redhat-release
+   42  hotsnamect1
+   43  hostnamectl
+   44  whoami
+   45  free -h
+   46  lscpu
+   47  lsblk
+   48  nmcli device status
+   49  nmcli c0nnection show
+   50  nmcli connection show
+   51  ping -c 4.8.8.8.8
+   52  ping -c 4 8.8.8.8
+   53  ping -c 4 google.com
+   54  cat /etc/redhat-release
+   55  hostnamectl
+   56  whoami
+   57  nmcli device statu
+   58  nmcli connection show
+   59  sudo nmcli connection modify ens160 ipv4.method auto
+   60  sudo nmcli connection up ens160
+   61  ip addr show ens160
+   62  nmcli device show ens160
+   63  ping -c 4 8.8.8.8
+   64  ping -c 4 google.com
+   65  ip route
+   66  ip addr show ens160
+   67  ping -c 3 192.168.1.50
+   68  sudo nmcli connection modify ens160 ipv4.method manual ipv4.addresses 192.168.1.50/24 ipv4.gateway 192.168.1.1
+   69  sudo nmcli connection modify ens160 ipv4.dns "8.8.8.8 8.8.4.4"
+   70  sudo nmcli connection modify ens160 ipv4.ignore-auto-dns yes
+   71  sudo nmcli connection down ens160
+   72  sudo nmcli connection up ens160
+   73  ip addr show ens160
+   74  ip route
+   75  default via 192.168.1.1 dev ens160
+   76  nmcli device show ens160 | grep DNS
+   77  ping -c 4 8.8.8.8
+   78  ping -c 4 google.com
+   79  nmcli connection show ens160
+   80  nmcli device show ens160
+   81  ip addr show ens160
+   82  ip route
+   83  ip addr show ens160
+   84  ip route
+   85  nmcli device show ens160 | grep DNS
+   86  ping -c 4 google.com
+   87  sudo whoami
+   88  sudo groupadd guest
+   89  getent group guest
+   90  sudo useradd invitado
+   91  sudo passwd invitado
+   92  sudo usermod -aG guest invitado
+   93  groups invitado
+   94  sudo userdel invitado
+   95  getent passwd invitado
+   96  sudo groupdel guest
+   97  getent group guest
+   98  id invitado
+   99  mkdir materia
+  100  ls
+  101  cd materia
+  102  pwd
+  103  touch estudiante.txt
+  104  ls -l
+  105  vi estudiante.txt
+  106  cat estudiante.txt
+  107  ls -l estudiante.txt
+  108  chmod 700 estudiante.txt
+  109  ls -l estudiante.txt
+  110  chmod 070 estudiante.txt
+  111  ls -l estudiante.tx
+  112  ls -l estudiante.txt
+  113  cd ..
+  114  mkdir materia2
+  115  ls
+  116  cp materia/estudiante.txt materia2/
+  117  cd ..
+  118  pwd
+  119  sudo chmod 470 materia/estudiante.txt
+  120  pwd
+  121  ls -la
+  122  ls -la materia
+  123  pwd
+  124  find ~ -maxdepth 3 -type d \( -name materia -o -name materia2 \) 2>/dev/null
+  125  find ~ -maxdepth 4 -name estudiante.txt 2>/dev/null
+  126  cp materia/estudiante.txt materia2/
+  127  cd ~
+  128  pwd
+  129  ls -la
+  130  cd ~
+  131  ls -l
+  132  ls -l materia
+  133  cat materia/estudiante.txt
+  134  ls -l materia/estudiante.txt
+  135  cat materia/estudiante.txt
+  136  sudo chmod 700 materia/estudiante.txt
+  137  ls -l materia/estudiante.txt
+  138  cat materia/estudiante.txt
+  139  cp materia/estudiante.txt materia1/
+  140  pwd
+  141  ls -ld materia materia1
+  142  cd ~
+  143  sudo ls -ld materia materia1
+  144  cd ~
+  145  sudo mkdir materia2
+  146  sudo ls -la materia2
+  147  sudo cat materia2/estudiante.txt
+  148  sudo cp materia/estudiante.txt materia2/
+  149  sudo ls -l materia2
+  150  sudo cat materia2/estudiante.txt
+  151  sudo rm -r materia
+  152  ls -l
+  153  cat ~/materia2/estudiante.txt
+  154  ls -l ~/materia2/estudiante.txt
+  155  sudo chmod u+r ~/materia2/estudiante.txt
+  156  cat ~/materia2/estudiante.txt
+  157  sudo cat ~/materia2/estudiante.txt
+  158  sudo chown cjesus:cjesus ~/materia2/estudiante.txt
+  159  chmod 644 ~/materia2/estudiante.txt
+  160  ls -l ~/materia2/estudiante.txt
+  161  cat ~/materia2/estudiante.txt
+  162  ls /mnt/hgfs
+  163  cp ~/materia2/estudiante.txt /mnt/hgfs/Shared/
+  164  ls /mnt/hgf
+  165  ls /mnt/hgfs
+  166  cp ~/materia2/estudiante.txt /mnt/hgfs/PracticaLinux/
+  167  history
+  168  history | less
+  169  history > comandos.txt
+[cjesus@rocky9 ~]$
